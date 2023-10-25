@@ -1,5 +1,9 @@
+let roundScore = 0
+let grandscore = 0
+
+
 let computerChoice = function () {
-    const options = ['Rock', 'Paper', 'Scissors']
+    const options = ['rock', 'paper', 'scissors']
 
     //select a random index from the options string above
     const randomIndex = Math.floor(Math.random() * options.length)
@@ -10,15 +14,37 @@ let computerChoice = function () {
     return randomChoice;
 }
 
-const userSelection = prompt("Rock, Paper or Scissors?: ")
-console.log(userSelection)
-
-const computerSelection = computerChoice();
-console.log(computerSelection)
-
-const play = function (userSelection, computerSelection) {
-    if (userSelection === computerSelection) {
-        alert(`It's a tie you chose ${userSelection} computer chose ${computerSelection}`)
-    }
+let userChoice = function () {
+    return prompt("Enter your choice: ")
 }
-console.log(play(userSelection, computerSelection))
+
+const play = function () {
+    let userSelection = userChoice()
+
+    let computerSelection = computerChoice()
+
+    if (userSelection === computerSelection) {
+        alert(`It's a tie you chose ${userSelection} computer chose ${computerSelection} `)
+        return roundScore += 1
+    }
+    else if (userSelection === "rock" && computerSelection === "paper") {
+        return alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `)
+    }
+    else if (userSelection === "paper" && computerSelection === "scissors") {
+        return alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `)
+    }
+    else if (userSelection === "scissors" && computerSelection === "rock") {
+        return alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `)
+    }
+
+}
+
+play()
+
+console.log(roundScore)
+
+play()
+console.log(roundScore)
+
+play()
+console.log(roundScore)
