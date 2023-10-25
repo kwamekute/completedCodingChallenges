@@ -10,11 +10,15 @@ let computerChoice = function () {
     return randomChoice;
 }
 
-let userInput = function () {
-    let input = prompt('Rock, Paper or Scissors: ')
+const userSelection = prompt("Rock, Paper or Scissors?: ")
+console.log(userSelection)
 
-    alert(`You chose ${input}`)
+const computerSelection = computerChoice();
+console.log(computerSelection)
 
-    return input
+const play = function (userSelection, computerSelection) {
+    if (userSelection === computerSelection) {
+        alert(`It's a tie you chose ${userSelection} computer chose ${computerSelection}`)
+    }
 }
-
+console.log(play(userSelection, computerSelection))
