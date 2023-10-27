@@ -13,11 +13,11 @@ let getComputerChoice = function () {
     const randomChoice = options[randomIndex];
 
     return randomChoice;
-}
+};
 
 let getUserChoice = function () {
     return prompt("Enter your choice: ");
-}
+};
 
 const playRound = function () {
     let userSelection = getUserChoice();
@@ -48,20 +48,20 @@ const playRound = function () {
         alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `);
 
         return computerScore = + 1;
-    }
+    };
 
-}
+};
 
-playRound()
+playRound();
 
 console.log(playerScore);
 console.log(computerScore);
 
-playRound()
+playRound();
 console.log(playerScore);
 console.log(computerScore);
 
-playRound()
+playRound();
 console.log(playerScore);
 console.log(computerScore);
 
@@ -72,4 +72,4 @@ if (playerScore > computerScore) {
 else {
 
     alert("You lost! Refresh page to try again");
-}
+}; 
