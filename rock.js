@@ -1,9 +1,9 @@
 let playerScore = 0;
-let compuScore = 0;
+let computerScore = 0;
 
 
 
-let computerChoice = function () {
+let getComputerChoice = function () {
     const options = ['rock', 'paper', 'scissors'];
 
     //select a random index from the options string above
@@ -15,14 +15,14 @@ let computerChoice = function () {
     return randomChoice;
 }
 
-let userChoice = function () {
+let getUserChoice = function () {
     return prompt("Enter your choice: ");
 }
 
-const play = function () {
-    let userSelection = userChoice();
+const playRound = function () {
+    let userSelection = getUserChoice();
 
-    let computerSelection = computerChoice();
+    let computerSelection = getComputerChoice();
 
     if (userSelection === computerSelection) {
         alert(`It's a tie you chose ${userSelection} computer chose ${computerSelection} `);
@@ -33,39 +33,39 @@ const play = function () {
 
         alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `);
 
-        return compuScore += 1;
+        return computerScore += 1;
 
     }
     else if (userSelection === "paper" && computerSelection === "scissors") {
 
         alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `);
 
-        return compuScore += 1;
+        return computerScore += 1;
 
 
     }
     else if (userSelection === "scissors" && computerSelection === "rock") {
         alert(`You lose. You chose ${userSelection} computer chose ${computerSelection} `);
 
-        return compuScore = + 1;
+        return computerScore = + 1;
     }
 
 }
 
-play()
+playRound()
 
 console.log(playerScore);
-console.log(compuScore);
+console.log(computerScore);
 
-play()
+playRound()
 console.log(playerScore);
-console.log(compuScore);
+console.log(computerScore);
 
-play()
+playRound()
 console.log(playerScore);
-console.log(compuScore);
+console.log(computerScore);
 
-if (playerScore > compuScore) {
+if (playerScore > computerScore) {
 
     alert("You won! Refresh page to play again");
 }
