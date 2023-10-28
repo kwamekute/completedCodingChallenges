@@ -2,7 +2,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-
 let getComputerChoice = function () {
     const options = ['rock', 'paper', 'scissors'];
 
@@ -52,18 +51,12 @@ const playRound = function () {
 
 };
 
-playRound();
+for (let i = 0; i = 3; i++) {
+    playRound();
 
-console.log(playerScore);
-console.log(computerScore);
-
-playRound();
-console.log(playerScore);
-console.log(computerScore);
-
-playRound();
-console.log(playerScore);
-console.log(computerScore);
+    console.log(computerScore);
+    console.log(playerScore);
+}
 
 if (playerScore > computerScore) {
 
