@@ -51,7 +51,7 @@ const playRound = function () {
 
 };
 
-for (let i = 0; i = 3; i++) {
+for (let i = 0; i < 6; i++) {
     playRound();
 
     console.log(computerScore);
