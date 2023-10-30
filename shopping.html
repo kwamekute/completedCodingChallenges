@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <h1>My shopping list</h1>
+    <div class="container">
+        <span>Enter a new item: </span><input type="text" id="shoppingItem"> <button id="addItem">Add item</button>
+        <UL id="list">
+
+        </UL>
+    </div>
+
+    <script>
+        const mainList = document.querySelector('#list');
+
+        const addBtn = document.querySelector('#addItem');
+
+        const Item = document.querySelector('#shoppingItem');
+
+
+
+
+        addBtn.addEventListener('click', () => {
+
+
+            const listItems = document.createElement('li');
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = "Delete";
+
+            listItems.innerText = Item.value;
+
+            listItems.appendChild(deleteButton);
+
+            mainList.appendChild(listItems);
+
+            Item.value = "";
+            Item.focus();
+
+            deleteButton.addEventListener('click', () => {
+                mainList.removeChild(listItems);
+            })
+        });
+
+
+
+    </script>
+</body>
+
+</html>
