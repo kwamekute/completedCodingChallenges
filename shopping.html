@@ -31,14 +31,11 @@
 
 
             const listItems = document.createElement('li');
-
             const deleteButton = document.createElement('button');
             deleteButton.textContent = "Delete";
 
             listItems.innerText = Item.value;
-
             listItems.appendChild(deleteButton);
-
             mainList.appendChild(listItems);
 
             Item.value = "";
